@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+
+    let first = ages[0];
+
+    let last = ages[ages.length - 1];
+
+    let difference = last - first;
+
+    console.log("question 1a", difference);
+
+    // add a new age to the array
+    ages.push(30);
+
+    // recalculate the difference between the first and last elements
+    first = ages[0];
+    last = ages[ages.length - 1];
+    difference = last - first;
+
+    console.log("question 1b", difference);
+
+    // calculate the average age using a loop
+    let sum = 0;
+    for (let i = 0; i < ages.length; i++) {
+      sum += ages[i];
+    }
+    let average = sum / ages.length;
+
+    console.log("question 1c", average);
+    /*
+                        Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
+                       2a. Use a loop to iterate through the array and calculate the average number of letters per name.
+                       2b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces */
+    /*
+                   2a. To calculate the average number of letters per name,
+                    we can use a for loop to iterate through the names array and add up the length of each name.
+                    We can then divide the total length by the number of names in the array to get the average: */
+
+    const names = ["Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"];
+
+    let totalLength = 0;
+    for (let i = 0; i < names.length; i++) {
+      totalLength += names[i].length;
+    }
+
+    const avgLength = totalLength / names.length;
+
+    console.log("Average number of letters per name: " + avgLength);
+
+    //The output is the average number of letters per name:
+
+    /* 2b. To concatenate all the names together with spaces in between,
+                    we can use a for loop to iterate through the names array
+                     and concatenate each name to a string with a space in between: */
+
+    let concatenatedNames = "";
+    for (let i = 0; i < names.length; i++) {
+      concatenatedNames += names[i] + " ";
+    }
+
+    console.log(
+      "question 2",
+      "All names concatenated: " + concatenatedNames.trim()
+    );
+
+    // How do you access the last element of any array?
+    let lastname = names[names.length - 1];
+
+    console.log("question 3", lastname);
+
+    // How do you access the first element of any array?
+
+    let firstname = names[0];
+
+    console.log("question 4", firstname);
+
+    /* Create a new array called nameLengths. Write a loop to iterate over the previously created names array
+                    and add the length of each name to the nameLengths array */
+
+    //create the nameLengths array and add the length of each name to it using a for loop:
+
+    let nameList = ["Alberto", "Beto", "Carlos", "Diego"];
+    let nameLengths = [];
+
+    for (let i = 0; i < nameList.length; i++) {
+      nameLengths.push(nameList[i].length);
+    }
+
+    console.log("question 5", nameLengths); // outputs [7, 4, 6, 5]
+
+    //code to iterate over the nameLengths array and calculate the sum of all the elements using a for loop:
+
+    let nameLengths1 = [7, 4, 6, 5]; // nameLengths array
+
+    let sumnew = 0;
+
+    for (let i = 0; i < nameLengths1.length; i++) {
+      sumnew += nameLengths1[i];
+    }
+
+    console.log("question 6", sumnew); // the sum total
+
+    /* Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself
+                n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’). */
+
+    function repeatTheWord(word, n) {
+      return word.repeat(n);
+    }
+    let repeatTheWords = repeatTheWord("Hello", 3);
+    console.log("question 7", repeatTheWords); // Output: 'HelloHelloHello'
+
+    /*Write a function that takes two parameters, firstName and lastName, and returns a full name.
+             The full name should be the first and the last name separated by a space.*/
+    var firstName = "Emm";
+    var lastName = "WhiteEagle";
+    function fullName(Data1, Data2) {
+      console.log("question 8", Data1 + " " + Data2);
+    }
+    fullName(firstName, lastName);
+
+    /* Write a function that takes an array of numbers and returns true if the sum of all the numbers
+             in the array is greater than 100. */
+
+    function sumOfAll(arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      return sum > 100;
+    }
+    const numbers = [10, 20, 30, 40, 50];
+    console.log("question 9", sumOfAll(numbers)); // Output: true
+
+    /*Write a function that takes an array of numbers and returns
+         the average of all the elements in the array. */
+
+    function theAvarage(numbers) {
+      if (numbers.length === 0) {
+        return 0; // to avoid division by zero
+      }
+
+      let theSum = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        theSum += numbers[i];
+      }
+      return theSum / numbers.length;
+    }
+
+    const myArray = [9, 12, 14, 16, 23];
+    const myAverage = theAvarage(myArray);
+    console.log("question 10", myAverage);
+
+    /* Write a function that takes two arrays of numbers and returns true
+    if the average of the elements in the first array is greater than the
+     average of the elements in the second array. */
+    // const numbers1 = 0;
+    // const numbers2 = 0;
+
+    // function elAverage1(numbers1, numbers2) {
+    //   for (let i = 0; (i = numbers2 < numbers1); i++) {
+    //     elAverage1 + number1 + number2;
+    //   }
+
+    //   return elAverage1 / elAverage1.length;
+    // }
+
+    // const array2 = [2, 4, 6, 8, 10];
+    // const myAverage2 = elAverage1(array2);
+    // console.log(myAverage2);
+
+    function theFinalAverage(numbers) {
+      if (numbers.length === 0) {
+        return 0; // to avoid division by zero
+      }
+      let sum = 0;
+      for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+      }
+      return sum / numbers.length;
+    }
+    const myArray2 = [5, 7, 9, 11, 13, 15];
+    const myAverage2 = theFinalAverage(myArray2);
+    console.log("question 11", myAverage2); // Output
+    /*Write a function called willBuyDrink that takes a boolean isHotOutside,
+     and a number moneyInPocket, and returns true if it is hot outside and if
+      moneyInPocket is greater than 10.50. */
+
+    function willBuyDrink(isHotOutside, moneyInPocket) {
+      if (isHotOutside && moneyInPocket > 10.5) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log("question 12", willBuyDrink(true, 11));
+    /*Create a function of your own that solves a problem. 
+In comments, write what the function does and why you created it. */
+
+    /*Vaibhashika
+Two Truths: Both Truly Existent
+Relative: Objects perform a function
+Ultimate: Objects are made of smallest particles, Mind is made of smallest moments of consciousness
+Standard 6 Consciousnesses
+created this function becuase was intrested to see how to print Buddhist philospy
+and get an understanding how fucntions work */
+
+    /* this is vaibhashika a buddhist philosphy tried using numbers but did not post those becuase as the ultimate conciousness 
+can be define on numbers 100%.
+but the idea is to print it using functions did not have time to break it up in more depth, thinks this shows how functions work. */
+
+    /* we use "Vaibhashika" philosophy as a function 
+ then inside the function  a code that could defines the four constants in this case I used console.log 
+for the main concepts of Madhyamika: "truths", "relative", "ultimate", and "consciousnesses".
+     I then used console.log() to print these concepts to the console.s a function: */
+
+    function vaibhashika() {
+      console.log("Two Truths: Both Truly Existent");
+      console.log("Relative: Objects perform a function");
+      console.log(
+        "Ultimate: Objects are made of smallest particles, Mind is made of smallest moments of consciousness"
+      );
+      console.log(
+        "Standard 6 Consciousnesses: Eye consciousness, Ear consciousness, Nose consciousness, Tongue consciousness, Body consciousness, Mind consciousness"
+      );
+    }
+
+    // Call the function to print out the key concepts of the Vaibhashika philosophy if nto will not get anything,
+    //note the console.log 13 was just to put that question 13, not sure where to put it and would like it to have been
+    // in a scroll down form but ran out of time, hope this works.
+
+    console.log("question 13");
+    vaibhashika();
+
+    /* here i did it in antother form each question but did not have time to link them into one
+    here I write the example explanation of 1st one the rest is same process that repeats. 
+    function defines a constant truths with the value of 
+"Two Truths: Both Truly Existent" and uses console.log() 
+to print it to the console. I called the function twoTruths() not we do not have to console, log it
+becuase it was already loged inside the function, so you do the calling outside the function by just calling the 
+name of the function. */
+
+    console.log("question 13b");
+
+    //  Two Truths: Both Truly Existent
+
+    function twoTruths() {
+      const truths = "Two Truths: Both Truly Existent";
+      console.log(truths);
+    }
+
+    // Call the function
+    twoTruths();
+
+    // Relative: Objects perform a function
+
+    function relative() {
+      const relative = "Relative: Objects perform a function";
+      console.log(relative);
+    }
+
+    // Call the function
+    relative();
+
+    /*Ultimate: Objects are made of smallest particles, Mind is made of smallest moments of consciousness
+Standard 6 Consciousnesses */
+
+    function Ultimate() {
+      const Ultimate =
+        "Ultimate:Objects are made of smallest particles, Mind is made of smallest moments of consciousness";
+      console.log(Ultimate);
+    }
+
+    // Call the function
+    Ultimate();
+  </script>
+</html>
